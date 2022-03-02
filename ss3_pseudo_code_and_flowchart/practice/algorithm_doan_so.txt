@@ -1,0 +1,8 @@
+begin
+ n là so duoc sinh trong so 0-9
+ nhap vao m
+ if(n==m)
+  display" du doan dung"
+else
+  display:du doan sai"
+end

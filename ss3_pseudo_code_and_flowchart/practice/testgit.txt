@@ -1,0 +1,6 @@
+begin
+input c
+   f=(9*c)/5+32
+display f
+end
+
