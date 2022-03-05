@@ -4,5 +4,5 @@ begin
  if(n==m)
   display" du doan dung"
 else
-  display:du doan sai"
+  display"du doan sai"
 end

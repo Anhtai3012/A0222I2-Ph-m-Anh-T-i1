@@ -1,0 +1,12 @@
+begin
+ input n
+ input a1,a2,a3,..,an
+ max=a1
+ i=2 
+   whhile i<=n
+    do max<ai
+      max=ai
+  end if
+    i=i+1
+    display max 
+end

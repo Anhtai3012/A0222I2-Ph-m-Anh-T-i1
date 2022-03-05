@@ -1,0 +1,9 @@
+begin
+ input a,b,c
+ if a>b and a>c
+ display a 
+ else b>c
+ display b
+ else 
+ display c
+end

@@ -1,5 +1,5 @@
 begin
  input tinh diem trung binh
  averge=(maht+physics + chemistry)/3
- display diem trung binh
+ display diem trung binh 3 mon
 end
