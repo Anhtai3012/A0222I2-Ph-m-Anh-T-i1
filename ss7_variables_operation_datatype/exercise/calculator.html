@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<span lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+</head>
+<h1> calculator</h1>
+<form>
+    <span> <input type="text" id="dong1"></span>
+    <span><input type="text" id="dong2"></span> <br><br>
+
+    <button type="button" onclick="myFunction1()"  >
+       addtion (+)
+    </button>
+    <button type="button" onclick="myFunction2()">
+        subtraction (-)
+    </button>
+    <button type="button" onclick="myFunction3()" >
+    multiplication(X)
+</button>
+    <button type="button" onclick="myFunction4()" >
+    Division(/)
+</button> <br>
+<span> reslut:</span>
+<span id="ouput"> </span>
+</form>
+ <script>
+        function myFunction1() {
+            let a = document.getElementById("dong1").value;
+            let b =document.getElementById("dong2").value;
+            x = parseInt(a) + parseInt(b);
+            document.getElementById("ouput").innerText = x;
+        }
+        function myFunction2() {
+            let a = document.getElementById("dong1").value;
+            let b =document.getElementById("dong2").value;
+            x = parseFloat(a) - parseFloat(b);
+            document.getElementById("ouput").innerText = x;
+        }
+        function myFunction3() {
+            let a = document.getElementById("dong1").value;
+            let b =document.getElementById("dong2").value;
+            x = parseFloat(a)* parseFloat(b);
+            document.getElementById("ouput").innerText= x;
+        }
+        function myFunction4() {
+            let a = document.getElementById("dong1").value;
+            let b =document.getElementById("dong2").value;
+            x = parseFloat(a) / parseFloat(b);
+            document.getElementById("ouput").innerText= x;
+        }
+    </script>
+</body>
+</html>

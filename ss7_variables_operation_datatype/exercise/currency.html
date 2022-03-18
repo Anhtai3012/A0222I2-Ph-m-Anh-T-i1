@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table>
+        <tr>
+            <td> Amount</td>
+            <td> from currency</td>
+            <td> to currency</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="text" id="nhap" > </td>
+            <td >
+                <select id="vn" >
+                    <option  > viet nam</option>
+                    <option> thai</option>
+                    <option> singabo</option>
+                </select>
+            </td>
+            <td>
+               <select>
+                   <option id="my"> USD</option>
+                   <option> PHAP</option>
+                   <option> BẢNG ANH</option>
+               </select>
+            </td>
+            <td> <button type="button" onclick="tien()"> convert</button> </td>
+        </tr>
+        <tr></tr>
+    </table>
+</form>
+<script>
+    function tien() {
+        let c = document.getElementById("nhap").value;
+       // let a = document.getElementById("vn").value;
+       // let b = document.getElementById("my").value;
+       x = parseFloat(c)/23000;
+       document.write(x);
+    }
+</script>
+</body>
+</html>
