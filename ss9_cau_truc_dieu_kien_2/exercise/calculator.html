@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .keybord{
+            text-align: center;
+            width: 50%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .screen{
+            vertical-align: bottom ;
+            text-align: right ;
+            width: 50%;
+            height: 50px;
+            background-color: silver;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>calculator</title>
+</head>
+<body>
+<div align="center">
+    <div >
+       <input type="text" class="screen" id="result" placeholder="0" readonly >
+    </div>
+    <div class="keybord" >
+        <button type="button" onclick="display('1')">1</button>
+        <button type="button" onclick="display('2')">2</button>
+        <button type="button" onclick="display('3')">3</button>
+        <button type="button" onclick="display('+')">+</button>
+        <button type="button" onclick="display('4')">4</button>
+        <button type="button" onclick="display('5')">5</button>
+        <button type="button" onclick="display('6')">6</button>
+        <button type="button" onclick="display('-')">-</button>
+        <button type="button" onclick="display('7')">7</button>
+        <button type="button" onclick="display('8')">8</button>
+        <button  type="button" onclick="display('9')">9</button>
+        <button type="button" onclick="display('*')">x</button>
+        <button type="button" onclick="reset()"> C</button>
+        <button type="button" onclick="display('0')">0</button>
+        <button type="button" onclick="result('')">=</button>
+        <button type="button" onclick="display('/')">/</button>
+    </div>
+</div>
+<script>
+ function display(value) {
+   let a = document.getElementById("result").value += value;
+   console.log(a);
+   z = eval(a);
+   console.log(z);
+ }
+ function result(){
+     document.getElementById("result").value =z;
+ }
+function reset() {
+    document.getElementById("result").value =" "
+}
+</script>
+</body>
+</html>

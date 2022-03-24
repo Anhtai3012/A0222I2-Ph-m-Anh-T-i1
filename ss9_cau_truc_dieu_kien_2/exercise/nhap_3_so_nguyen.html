@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="point"></p>
+<script>
+    let test = parseInt(prompt("bai kiem tra")) ;
+    let test_giuaki = parseInt(prompt("bai giua ki "));
+    let testFinal = parseInt(prompt("bai cuoi ki"))
+    tong = (test+test_giuaki*2+testFinal*3)/6;
+    if (tong >= 8){
+        document.getElementById("point").innerHTML="hoc sinh gioi";
+    } else if ( 6>= tong < 8){
+        document.getElementById("point").innerHTML="hoc sinh kha";
+    } else if( 5>= tong <6 ) {
+        document.getElementById("point").innerHTML="hoc sinh trung binh";
+    } else {
+        document.getElementById("point").innerHTML="hoc sinh yeu"
+    }
+</script>
+</body>
+</html>

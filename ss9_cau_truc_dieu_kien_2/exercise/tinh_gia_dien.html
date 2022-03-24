@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="electric">
+</p>
+<script>
+  let p = parseFloat(prompt("nhap cong suat(kW)"));
+  let t = parseFloat(prompt("nhap thoi gian su dung (h)"))
+    A = p*t
+    if (A <=50 ){
+        document.getElementById("electric").innerHTML = " gia dien la : 1678 vnd"
+    } else  if( A <=100){
+        document.getElementById("electric").innerHTML = " gia dien la : 1734 vnd"
+    } else if ( A <= 200 ) {
+        document.getElementById("electric").innerHTML = " gia dien la : 2014 vnd"
+    } else if ( A <= 300) {
+        document.getElementById("electric").innerHTML = " gia dien la : 2536 vnd"
+    } else if ( A <= 400) {
+        document.getElementById("electric").innerHTML = " gia dien la : 2834 vnd"
+    } else {
+        document.getElementById("electric").innerHTML = " gia dien la : 2927 vnd"
+    }
+</script>
+</body>
+</html>

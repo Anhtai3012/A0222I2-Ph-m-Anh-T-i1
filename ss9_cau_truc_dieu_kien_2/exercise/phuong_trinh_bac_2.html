@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>aX^2+bX+C</p>
+<p id="result"></p>
+<script>
+    let a = parseInt(prompt("nhap a"));
+    let b = parseInt(prompt("nhap b "));
+    let c = parseInt(prompt("nhap c"));
+    x = b ^ 2 - 4 * a * c;
+    if (x > 0) {
+        x1 = (-b + Math.sqrt(x)) / 2;
+        x2 = (-b - Math.sqrt(x)) / 2;
+        document.getElementById("result").innerHTML = " phuong trinh co 2 nghiem"+"x1:"+x1+"x2:"+x2;
+    }
+    else
+    if (x == 0) {
+        x1 = -b / (2 * a);
+        document.getElementById("result").innerHTML = "phuong trinh co nghiem kep" + x1;
+    } else {
+        document.getElementById("result").innerHTML = "phuong trinh vo nghiem";
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <p id="thue"></p>
+<script>
+    let a = parseFloat(prompt("tien luong cua thue/nam"));
+    if ( a <= 60 ) {
+        document.getElementById("thue").innerHTML = "thue ca nhan 1 nam"+ a*(5/100)+ "trieu";
+    } else if (a<=120){
+        document.getElementById("thue").innerHTML = " thue ca nhan 1 nam "+ a*(10/100)+"trieu" ;
+    } else if ( a <=216){
+        document.getElementById("thue").innerHTML = "thue ca nhan 1 nam "+ a*(15/100) +"trieu";
+    } else if ( a <= 384) {
+        document.getElementById("thue").innerHTML = "thue ca nhan 1 nam " + a * (20 / 100) +"trieu";
+    } else if ( a <=624 ) {
+        document.getElementById("thue").innerHTML = "thue ca nhan 1 nam " + a * (25 / 100) +"trieu";
+    } else if ( a <=960) {
+        document.getElementById("thue").innerHTML = "thue ca nhan 1 nam " + a * (30 / 100) +"trieu";
+    } else {
+        document.getElementById("thue").innerHTML = " thue ca nhan 1 nam " + a * (35 / 100) +"trieu";
+    }
+</script>
+</body>
+</html>

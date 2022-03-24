@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="bacanh"></h1>
+ <script>
+     let a =parseInt(prompt("nhap a"));
+     let b =parseInt(prompt("nhap b"));
+     let c =parseInt(prompt("nhap c"));
+     if ( a >0 && b>0 && c>0){
+         if ( a+b > c ){
+             if(b+c >a ){
+                 if ( a+c >b){
+                     document.getElementById("bacanh").innerHTML = "la ba canh cua tam giac";
+                 }
+             }
+         }
+     } else {
+         document.getElementById("bacanh").innerHTML = "ko phai 3 canh cua tam giac" ;
+     }
+ </script>
+</body>
+</html>

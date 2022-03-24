@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="cuoc"></p>
+<script>
+    let a = parseFloat(prompt("so phut:")) ;
+    if (a > 200) {
+        x = (a -200)*200+150*400+50*600+25;
+        document.getElementById("cuoc").innerHTML = "phi:"+x+"vnd";
+    } else if (a > 150 ) {
+        x = (a -150)*400+50*600+25;
+        document.getElementById("cuoc").innerHTML = "phi:"+x+"vnd";
+    } else {
+        x= (a*600)+25;
+        document.getElementById("cuoc").innerHTML = "phi:"+x+"vnd";
+    }
+</script>
+</body>
+</html>
