@@ -7,18 +7,16 @@
 <body>
 <p id="point"></p>
 <script>
-    let test = parseInt(prompt("bai kiem tra")) ;
-    let test_giuaki = parseInt(prompt("bai giua ki "));
-    let testFinal = parseInt(prompt("bai cuoi ki"))
-    tong = (test+test_giuaki*2+testFinal*3)/6;
-    if (tong >= 8){
-        document.getElementById("point").innerHTML="hoc sinh gioi";
-    } else if ( 6>= tong < 8){
-        document.getElementById("point").innerHTML="hoc sinh kha";
-    } else if( 5>= tong <6 ) {
-        document.getElementById("point").innerHTML="hoc sinh trung binh";
+    let a = parseInt(prompt("nhap so nguyen a"));
+    let b = parseInt(prompt("nhap so nguyen b"));
+    let c = parseInt(prompt("nhap so nguyen c"));
+
+    if ( a > b && a> c ) {
+        document.write("so nguen lon nhat la a")
+    } else if ( b > c) {
+        document.write("so nguyen lon nhat la b")
     } else {
-        document.getElementById("point").innerHTML="hoc sinh yeu"
+        alert("so nguyen lon nhat la c")
     }
 </script>
 </body>

@@ -6,11 +6,18 @@
 </head>
 <body>
 <script>
-    let a = parseInt(prompt("nhap so nguyen"));
-    if ( a >100 ) {
-        document.write("so nguen lon nhat la:999")
+    let test = parseInt(prompt("bai kiem tra")) ;
+    let test_giuaki = parseInt(prompt("bai giua ki "));
+    let testFinal = parseInt(prompt("bai cuoi ki"))
+    tong = (test+test_giuaki*2+testFinal*3)/6;
+    if (tong >= 8){
+        document.getElementById("point").innerHTML="hoc sinh gioi";
+    } else if ( 6>= tong < 8){
+        document.getElementById("point").innerHTML="hoc sinh kha";
+    } else if( 5>= tong <6 ) {
+        document.getElementById("point").innerHTML="hoc sinh trung binh";
     } else {
-        document.write("so nguyen lon nhat : -1")
+        document.getElementById("point").innerHTML="hoc sinh yeu"
     }
 </script>
 </body>
