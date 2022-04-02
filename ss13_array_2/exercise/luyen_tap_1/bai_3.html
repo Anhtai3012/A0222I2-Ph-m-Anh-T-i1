@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="'demo"> </p>
+
+<script>
+    let sum = 0;
+    const numbers = [45, 4, 9, 16, 25];
+    numbers.sort(function (a,b) {
+         return b-a;
+    });
+    for ( let value of numbers) {
+      sum += (value/2) ;
+    } document.write('trung binh'+sum)
+    document.write('<br>'+'gia tri lon nhat trong mang'+numbers[0])
+</script>
+</body>
+</html>

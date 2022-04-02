@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = [-3, 5, 1, 3, 2, 10];
+    document.write(x +"<br>")
+    let first = 0;
+    let last = x.length - 1;
+    while (first < last) {
+        let b = x[first];
+        console.log("biếm tạm: " + b);
+        console.log("vị trí cuối: " + x[last]);
+        x[first] = x[last];
+        console.log("vị trí đầu: " + x[first]);
+        x[last] = b;
+        console.log("vị trí cuối sau khi thay đổi: " + x[last])
+        first++;
+        last--;
+    } document.write(x)
+</script>
+</body>
+</html>

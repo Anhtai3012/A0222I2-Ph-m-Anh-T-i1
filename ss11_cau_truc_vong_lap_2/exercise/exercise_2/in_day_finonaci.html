@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = parseInt(prompt("nhap so ma ban muon hien"));
+    let count = 1;
+    let fristt = 0;
+    let second = 1;
+    let result ;
+    do {
+      result = fristt+second;
+      document.write(result);
+        fristt = second;
+      second = result;
+      count++
+    } while (count <= input );
+</script>
+</body>
+</html>

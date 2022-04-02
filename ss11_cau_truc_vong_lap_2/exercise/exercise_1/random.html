@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let can_tren = parseInt(prompt("nhap can tren:"));
+    let can_duoi = parseInt(prompt("nhap can duoi:"));
+    let random = Math.floor(Math.random()* (can_tren - can_duoi +1)+ can_duoi);
+    let dem = 0;
+    do {
+        let a = parseInt(prompt("nhap so ban can doan:"));
+        if (random == a)
+               alert("chung thuong");
+        else if (random > a){
+            alert("moi ban nhap lai so nho hon ");
+            dem++;
+        } else if (random <a) {
+            alert("moi ban nhap lai so lon hon ");
+            dem++
+        } if (dem >3 ){
+            alert("chuc ban may man lan sau");
+        }
+    } while (true);
+</script>
+</body>
+</html>
