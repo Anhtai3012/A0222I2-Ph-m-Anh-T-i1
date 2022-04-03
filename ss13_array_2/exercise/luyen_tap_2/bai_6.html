@@ -5,6 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let str1 = prompt("Nhap chuoi 1: ");
+    let arrStr1 = Array.from(str1);
+    document.write("str1: " + str1);
+    for (let i in arrStr1) {
+        if (arrStr1[i] === "-") {
+            arrStr1[i] = "_";
+        }
+    }
+    document.write("</br>str1: " + arrStr1)
+</script>
 </body>
 </html>

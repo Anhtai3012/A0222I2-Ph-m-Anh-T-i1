@@ -10,12 +10,15 @@
     for (let i = 0; i < 10; i++) {
         arr[i] = prompt("Nhập phần tử vào mảng: ")
     }
-    document.write("Mảng ban đầu [" + arr + "]<br>")
-    // let str = arr.toString();
-    // let str = arr.join("-");
-    arr.reverse();
-    let str = arr.join("");
-    document.write('Mảng đã đảo ngược:"' + str + '"')
+    console.log(arr)
+    let count = 0;
+    let number = [];
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j] % 1 === 0) {
+            number[j] = arr[j];
+            console.log(arr[j])
+            count++;
+        }
     }
 </script>
 </body>
