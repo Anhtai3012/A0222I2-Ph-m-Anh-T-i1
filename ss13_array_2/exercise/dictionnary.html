@@ -5,24 +5,59 @@
     <title>Title</title>
 </head>
 <body>
-<form>
-    <input type="text" id="dic">
-    <input type="button" value="search" onclick="dictionnary()">
-    <p id="result"></p>
-    <script>
-        let viet = ['xin chao','tam biet','hen gap lai'];
-        let english = ['hello','good bye','see you again'];
-        function dictionnary() {
-             let a = document.getElementById("dic").value
-            console.log(a)
-            for (let i = 0; i < english.length ; i++) {
-                if (english[i] == a ) {
-                    document.getElementById("result").innerHTML= viet[i];
-                    break;
-                }
-            }
+<!--<form>-->
+<!--    <input type="text" id="dic">-->
+<!--    <input type="button" value="search" onclick="dictionnary()">-->
+<!--    <p id="result"></p>-->
+<!--    <script>-->
+<!--        let viet = ['xin chao','tam biet','hen gap lai'];-->
+<!--        let english = ['hello','good bye','see you again'];-->
+<!--        let count = 0;-->
+<!--        function dictionnary() {-->
+<!--             let a = document.getElementById("dic").value-->
+<!--            console.log(a)-->
+<!--            for (let i = 0; i < english.length ; i++) {-->
+<!--                if (english[i] == a ) {-->
+<!--                    document.getElementById("result").innerHTML= viet[i];-->
+<!--                    break;-->
+<!--                } else {-->
+<!--                    count++-->
+<!--                }-->
+<!--                if( count != 0){-->
+<!--                    alert('khong co trong dictionary')-->
+<!--                }-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
+<!--</form>-->
+<label for="inputEng">Input:</label>
+<input id="inputEng" type="text">
+<button onclick="searchVN()">Search</button>
+<p id="result"></p>
+<body>
+<script>
+    let arrEng = ["people","hello","map"];
+    let arVN = ["con người", "xin chào", "bản đồ"];
+
+    function searchVN() {
+        let result = "";
+
+        /*B1: lấy giá trị của ô input tiếng Anh*/
+        let keyWord = document.getElementById("inputEng").value;
+
+        /*B2: tìm index của từ khóa mà người dùng nhập.*/
+        let index = arrEng.indexOf(keyWord);
+        if(index != -1){
+            /*tìm ra thì index != -1*/
+            result = arVN[index];
+        } else {
+            result = "Not found...."
         }
-    </script>
-</form>
+
+        /*B3: hiển thị kết quả*/
+        document.getElementById("result").innerText = result;
+    }
+
+</script>
 </body>
 </html>

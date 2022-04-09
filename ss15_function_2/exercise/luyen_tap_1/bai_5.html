@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" placeholder="nhap vocabulary" id="input">
+    <input type="button" value="translate" onclick="translate()">
+    <p id="result"></p>
+</form>
+<script>
+    let name = [ 'Ursa Minor', 'Tarurus',' Cygnus', 'Lyra', 'Aquila', 'Ursa Major' , 'Leo'];
+    let star = ['Polaris', 'Aldebaran',' Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    function translate() {
+        let result = '';
+        let keyWord = document.getElementById("input").value;
+        let index = name.indexOf(keyWord);
+        if( index != -1 ){
+            result= star[index];
+        } else {
+            alert(' not found...');
+        }
+        document.getElementById("result").innerHTML = result
+    }
+
+</script>
+</body>
+</html>

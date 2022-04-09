@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check() {
+        arr = [];
+        for (let i = 0; i < 5 ; i++) {
+            arr[i] = parseInt(prompt('nhap vao mang'));
+        }
+        let input = parseInt(prompt('nhap so de kiem tra'));
+        let count =0;
+        for (const i in arr) {
+            if (arr[i] === input) {
+                count++;
+                document.write(arr[i] + 'so lan suat hien' + count+'<br>');
+            }
+        }
+        if(count == 0) {
+            document.write('-1')
+        }
+    }
+    check();
+
+</script>
+</body>
+</html>

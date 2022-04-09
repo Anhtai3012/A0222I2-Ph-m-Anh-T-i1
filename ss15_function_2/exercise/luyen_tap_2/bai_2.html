@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function area(x) {
+      return Math.pow(x,2)*PI
+    }
+    function perimeter(x) {
+        return 2*x*PI
+    }
+    const PI = 3.14;
+    let input = parseFloat(prompt('nhap ban kinh x'));
+    let ouput = area(input);
+    let ouput1 = perimeter(input);
+    document.write('area of x:' + ouput + '<br>'+ 'perimeter of x:'+ ouput1 )
+</script>
+</body>
+</html>
