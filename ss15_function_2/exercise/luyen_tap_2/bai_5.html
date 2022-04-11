@@ -11,13 +11,11 @@
         for (let i = 0; i < 3 ; i++) {
             arrint[i] = parseInt(prompt('nhap so '));
         }
-        console.log(arriint);
-        let max = 0;
-        for (let value in arrint) {
-            if(arrint){
-
-            }
-        }
+        console.log(arrint);
+        arrint.sort(function (a,b) {
+            return b-a;
+        })
+        alert('max ='+arrint[0])
     }
     checkinteger();
 </script>
