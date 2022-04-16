@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function Apple (type) { 1.2.Khai báo hàm bằng thuộc tính prototype
+    //     this.type = type;
+    //     this.color = "red";
+    // }
+    // Apple.prototype.getInfo = function() {
+    //     return this.color + ' ' + this.type + ' apple';
+    // };
+    // 1. Sử dụng hàm **********************************************************************************************************
+    //function Apple (type) {
+    // this.type = type;
+    // this.color = "red";
+    // this.getInfo = getAppleInfo;
+    // }
+    // //Khai báo hàm getAppleInfo()
+    // //Khuyến nghị: đây là cách không nên dùng,
+    // //đọc tiếp sẽ rõ
+    // function getAppleInfo() {
+    //     return this.color + ' ' + this.type + ' apple';
+    // }
+    // Để khởi tạo một đối tượng sử dụng hàm khởi tạo Apple, gán giá trị cho các thuộc tính và gọi phương thức bạn có thể làm như sau:
+    //
+    //     let apple = new Apple('macintosh');
+    // apple.color = "reddish";
+    // alert(apple.getInfo());
+// 1.1 Sử dụng hàm bên trong
+//     function Apple (type) {
+//         this.type = type;
+//         this.color = "red";
+//         this.getInfo = function() {
+//             return this.color + ' ' + this.type + ' apple';
+//         };
+//     }
+//2. Sử dụng object literals
+//     Literals là một cách tạo đối tượng và mảng trong Javascript ngắn nhất trong Javascript. Để tạo ra một đối tượng rỗng, bạn có thể làm như sau:
+//
+//         let o = {};
+//     thay cho các thông thường:
+//
+//         let o = new Object();
+//     Đối với mảng, bạn khai báo như sau:
+//
+//         let a = [];
+//     Thay cho cách thông thường:
+//
+//         let a = new Array();
+//     Vậy bạn có thể bỏ qua cách khai báo lớp rườm rà và tạo ra một thể hiện (đối tượng) ngay tức khắc. Cách này hoạt động giống như những ví dụ trước nhưng sử dụng cú pháp như sau:
+//
+//         let apple = {
+//             type: "macintosh",
+//             color: "red",
+//             getInfo: function () {
+//                 return this.color + ' ' + this.type + ' apple';
+//             }
+//         }
+//     Với cách này, bạn không cần (và không thể) khởi tạo đối tượng của lớp vì đơn giản là nó đã tồn tại. Vì vậy bạn chỉ cần bắt đầu sử dụng đối tượng này thôi.
+//
+//         apple.color = "reddish";
+//     alert(apple.getInfo());
+    let apple = new function() {
+        this.type = "macintosh";
+        this.color = "red";
+        this.getInfo = function () {
+            return this.color + ' ' + this.type + ' apple';
+        };
+    }
+    apple.color = "reddish";
+    alert(apple.getInfo());
+</script>
+</body>
+</html>

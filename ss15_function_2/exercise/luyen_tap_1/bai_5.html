@@ -6,7 +6,7 @@
 </head>
 <body>
 <form>
-    <input type="text" placeholder="nhap vocabulary" id="input">
+    <input type="text" placeholder=" nhap vocabulary" id="input">
     <input type="button" value="translate" onclick="translate()">
     <p id="result"></p>
 </form>
@@ -18,11 +18,11 @@
         let keyWord = document.getElementById("input").value;
         let index = name.indexOf(keyWord);
         if( index != -1 ){
-            result= star[index];
+            result = star[index];
         } else {
             alert(' not found...');
         }
-        document.getElementById("result").innerHTML = result
+        document.getElementById("result").innerHTML = result;
     }
 
 </script>

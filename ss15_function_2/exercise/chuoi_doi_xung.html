@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function checkSymmetricString(arr) {
+    //
+    //     let first = 0;
+    //     let last = arr.length-1;
+    //     if (arr.length == 1) {
+    //         return true;
+    //     }
+    //     if (arr[first] != arr[last]) { // nếu 2 dấu bằng sẽ cùng kiểu dữ liệu
+    //         return false;
+    //     } else {
+    //         arr = arr.slice(first, last);
+    //         return  checkSymmetricString(arr);
+    //     }
+    // }
+    // let str = prompt("Input string?");
+    // let strArr = str.split("");
+    // if (checkSymmetricString(strArr) === true) {
+    //     alert("Đây là chuỗi đối xứng");
+    // } else {
+    //     alert("Đây không phải là chuỗi đối xứng");
+    // }
+
+    /*Hàm tìm số đảo ngược trong JavaScript*/
+    function reverse_num(n){
+        n = n.toString()
+        return n.split("").reverse().join("");
+    }
+
+    /*Ứng dụng Hàm tìm số đảo ngược để tạo Hàm kiểm tra số đối xứng trong JavaScript*/
+    function symmetrical_num(n){
+        // flag = 1 => số đối xứng
+        // flag = 0 => không phải số đối xứng
+
+        let flag =0;
+        if (reverse_num(n) == n) {flag = 1;
+        return flag;
+        }
+    }
+    let n= prompt(" Nhap so tu nhien= ");
+    let check = symmetrical_num(n);
+    if( check == 1 ) console.log(n + " la  doi xung");
+    else console.log(n + " khong phai la la  doi xung");
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperature = function (c) {
+        let f = null;
+        let k = null;
+        this.c = c;
+        this.dof = function () {
+            return f = (this.c*1.8)+32;
+        }
+        this.kelvin =function () {
+            return k = this.c+273.15;
+        }
+    }
+    let temperature = new Temperature(parseInt(prompt('nhap do c')));
+    console.log(temperature.dof());
+    document.write('C sang kelvin :'+temperature.kelvin())
+</script>
+</body>
+</html>

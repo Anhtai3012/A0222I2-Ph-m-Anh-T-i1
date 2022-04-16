@@ -6,15 +6,16 @@
 </head>
 <body>
 <script>
-    function swap() {
-        let arr = [];
-        for (let i = 0; i < 5; i++) {
-            arr[i] = parseInt(prompt('nhap so'))
-        }
+    function swap(arr) {
         arr.reverse();
         document.write(arr)
     }
-    swap();
+    let arr = [];
+    for (let i = 0; i < 5; i++) {
+        arr[i] = parseInt(prompt('nhap so'))
+    }
+    let Arr = swap(arr);
+
 
 
 </script>

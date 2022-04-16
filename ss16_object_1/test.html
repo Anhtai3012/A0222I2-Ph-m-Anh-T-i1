@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+// function student(id,name,address) {
+//     this.id = id;
+//     this.name = name;
+//     this.address = address;
+//     this.getInfo = function () {
+//         return 'id'+ this.id+'name'+this.name+'addresss'+this.address
+//     }
+// }
+// let student1=  new student(1,'tai','da nang');
+// console.log(student1.getInfo());
+// let student2 = {
+//     name : 'anh tai',
+//     age : 28,
+//     address : 'DA NANG',
+//     getInfor : function () {
+//        return 'name = ' +this.name+' ;age = '+ this.age +'; address = '+ student2.address ;
+//     }
+// }
+// document.write(student2.age+'<br>');
+// document.write(student2.getInfor());
+    let person = {
+        name : ['tai','hieu'],//property
+        age : 20,//property
+        gender : 'male'+'female',//property,
+        interests : ['music','xxx'],//property
+        bio : function () {
+               alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+        },//method
+        greeting: function() {
+            alert('Hi! I\'m ' + this.name[0] + '.');
+        }//method
+    } //Một đối tượng như vậy được gọi là Hằng Đối tượng (object literal)
+    person.bio();
+    person.greeting();
+    person.eye = 'blue';
+    person.farewell = function (){
+        alert('hello everybody')
+    }
+    console.log(person);
+    person.farewell();
+    let myDataName = 'height';
+    let myDataValue = '1.75 m ';
+    person[myDataName] = myDataValue;
+    person.height
+</script>
+</body>
+</html>

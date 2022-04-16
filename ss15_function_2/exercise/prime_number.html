@@ -10,10 +10,7 @@ function thousand() {
     let number = parseInt(prompt("Nhap so tu nhien : "));
     let flag = true;
     if (number === 1) flag = false;
-    for (let i = 2;
-         i < Math.sqrt(number);
-         i++
-    ) {
+    for (let i = 2; i < Math.sqrt(number); i++) {
         if (number % i == 0) {
             flag = false;
         }
