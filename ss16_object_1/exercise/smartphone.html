@@ -5,112 +5,83 @@
     <title>Title</title>
 </head>
 <body>
-<table>
-    <th>Nokia</th>
-
- <tr>
-     <td><input id="nokia" type="text">
-     <input type="button" value="send" onclick="Massege1()">
-     </td>
- </tr>
-    <tr>
-        <td>trang thai pin</td>
-    </tr>
-    <tr>
-        <td>luu tin nhan dang soan thao</td>
-    </tr>
-    <tr>
-        <td>vùng nhớ dùng để lưu tin nhắn trong hộp thư đến.</td>
-    </tr>
-    <tr>
-        <td> vùng nhớ dùng để lưu tin nhắn đã gửi</td>
-    </tr>
-    <tr>
-        <td><input type="button" value="turnon"></td>
-    </tr>
-    <tr>
-        <td> chức năng xạc pin điện thoại.</td>
-    </tr>
-    <tr>
-        <td> chức năng nhận tin nhắn từ một chiếc mobile khác.</td>
-    </tr>
-    <tr>
-        <td>chức năng xem tin trong hộp thư đến.</td>
-    </tr>
-    <tr>
-        <td>chức năng xem tin đã gửi.</td>
-    </tr>
-    <tr>
-        <td>giam phan tram pin </td>
-    </tr>
-</table>
-<table>
-    <th>iphone</th>
-    <tr>
-        <td><input id="iphone" type="text">
-            <input type="button" value="send" onclick="Massege()">
-        </td>
-    </tr>
-    <tr>
-        <td>trang thai pin</td>
-    </tr>
-    <tr>
-        <td>luu tin nhan dang soan thao</td>
-    </tr>
-    <tr>
-        <td>vùng nhớ dùng để lưu tin nhắn trong hộp thư đến.</td>
-    </tr>
-    <tr>
-        <td> vùng nhớ dùng để lưu tin nhắn đã gửi</td>
-    </tr>
-    <tr>
-        <td><input type="button" value="turnon"></td>
-    </tr>
-    <tr>
-        <td> chức năng xạc pin điện thoại.</td>
-    </tr>
-    <tr>
-        <td> chức năng nhận tin nhắn từ một chiếc mobile khác.</td>
-    </tr>
-    <tr>
-        <td>chức năng xem tin trong hộp thư đến.</td>
-    </tr>
-    <tr>
-        <td>chức năng xem tin đã gửi.</td>
-    </tr>
-    <tr>
-        <td>giam phan tram pin </td>
-    </tr>
-</table>
+<input id="iphone" type="text">
+<input  type="button" onclick="gui('iphone')" value="Gửi tin"><br>
+<input id="nokia" type="text">
+<input  type="button" onclick="gui('nokia')" value="Gửi tin">
 <script>
-  class DienThoai{
-        constructor(pin,onoff,sacpin,change,) {
-            this.save = save;
-            this.onoff = onoff;
-            this.change = change;
-            this.pin = pin;
+    class DienThoai{
+        constructor(pin) {
+            this.status=true; // đang mở
+            this.pin =pin;
+            this.vungNhoSoanThao="";
+            this.vungNhoTinDen=[];
+            this.vungNhoTinDaGui=[];
         }
-        checkonoff(){
-            ì
+        checkStatus(){
+            return this.status;
         }
-        checktrangthai(){
-            if(this.pin >=80){
-                alert('pin o trang thai tot')
-                this.pin--
-            } else if(this.pin >= 20){
-                alert('pin o trang thai trung binh')
-                this.pin--
-            } else {
-                alert('pin yeu ')
-                this.pin--
+        batTat(){
+            this.status = !this.status;
+        }
+        sacPin(){
+            if (this.pin<10){
+                this.pin =100;
             }
         }
-
-  }
-  let smartphone = new DienThoai(100,"","","",);
-  smartphone.checktrangthai();
-
-</script>
-
+        soanTinNhan(tinSoanThao){
+            this.pin--;
+            this.vungNhoSoanThao =tinSoanThao;
+        }
+        nhanTinNhan(tinDen){
+            this.pin--;
+            this.vungNhoTinDen.push(tinDen);
+        }
+        guiTinNhan(dienThoai, tinGui){
+            this.pin--;
+            this.soanTinNhan(tinGui);
+            this.vungNhoTinDaGui.push(this.vungNhoSoanThao)
+            dienThoai.nhanTinNhan(this.vungNhoSoanThao)
+            this.vungNhoSoanThao="";
+        }
+        hienThiTinDen(){
+            this.pin--;
+            let mess ="";
+            for (let i = 0; i <this.vungNhoTinDen.length ; i++) {
+                // console.log((1+i)+"."+this.vungNhoTinDen[i]);
+                mess += this.vungNhoTinDen[i] +",";
+            }
+            return mess
+        }
+        hienThiTinDaGui(){
+            for (let i = 0; i <this.vungNhoTinDaGui.length ; i++) {
+                console.log((1+i)+"."+this.vungNhoTinDaGui[i]);
+            }
+        }
+    ​
+    }
+​
+    let nokia = new DienThoai(100);
+    let iphone = new DienThoai(100);
+    function gui(ten) {
+    ​
+         if (ten =="iphone"){
+             alert("iphone")
+             let newMess = document.getElementById('iphone').value;
+             iphone.guiTinNhan(nokia,newMess);
+             document.getElementById('nokia').value = nokia.hienThiTinDen()
+         }else if (ten =="nokia") {
+             let newMess = document.getElementById('nokia').value;
+             nokia.guiTinNhan(iphone,newMess);
+             document.getElementById('iphone').value = iphone.hienThiTinDen()
+         }
+​
+    }
+​
+    // nokia.guiTinNhan(iphone,"hello iphone");
+    // iphone.hienThiTinDen();
+    // iphone.guiTinNhan(nokia,"Ok xin chào nokia");
+    // nokia.hienThiTinDen()
+    </script>
 </body>
 </html>
