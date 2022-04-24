@@ -13,10 +13,12 @@
 
         turnOff() {
             this.status = false;
+            alert('den tat')
         }
 
         turnOn() {
             this.status = true;
+            alert('den sang')
         }
     }
 
@@ -42,16 +44,8 @@
     let button = new SwitchButton();
      button.connectToLamp(lamp);
      alert(" nut da ket noi voi den ");
-     for (let count = 0; count < 10; count++) {
-         button.switchOn();
-         if (lamp.status) {
-            document.write("The lamp is on." + "<br>")
-        }
-        button.switchOff();
-        if (!lamp.status) {
-            document.write("The lamp is off." + "<br>")
-         }
-    }
+    button.switchOn()
+    button.switchOff()
 </script>
 </body>
 </html>

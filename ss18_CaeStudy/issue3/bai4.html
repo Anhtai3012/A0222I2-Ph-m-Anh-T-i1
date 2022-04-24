@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="inputEng">DATA</label>
+<input id="inputEng" type="text">
+<button onclick="searchVN()">Search</button>
+<p id="result"></p>
+<body>
+<script>
+    let input1 = ["1234", "3456", "789"];
+    let input2 = ["mot hai ba bon ", "BA BON NAM SAU", "KHONG CO"];
+
+    function searchVN() {
+        let result = "";
+
+        let keyWord = document.getElementById("inputEng").value;
+
+        let index = input1.indexOf(keyWord);
+        if (index !== -1) {
+
+            result = input2[index];
+        } else {
+            result = "Not found...."
+        }
+
+        document.getElementById("result").innerText = result;
+    }
+
+</script>
+</body>
+</html>
