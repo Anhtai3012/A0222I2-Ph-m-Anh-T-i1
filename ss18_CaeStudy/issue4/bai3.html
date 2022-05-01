@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputOne = prompt('string 1');
+    let inputTwo = prompt('string 2');
+    document.write('string1:'+inputOne+'<br>');
+    document.write('string2:'+inputTwo);
+    let result = '';
+    for (let i = 0; i <inputOne.length ; i++) {
+        if(inputOne.indexOf(inputTwo[i]) !== -1){
+            result += inputTwo[i];
+        }
+    } alert(result)
+</script>
+</body>
+</html>

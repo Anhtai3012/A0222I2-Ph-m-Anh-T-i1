@@ -9,14 +9,10 @@
     let arr1 = [1,2,3,4,4,5];
     let arr2= [2.4,7,8,8,8];
     let arr = [];
-    let count = 0
      for (let i = 0; i <arr2.length ; i++) {
-         if(arr2[i] !== arr2[i+1]){
-             count++
-        if(arr1.indexOf(arr2[i]) === -1){
-                arr.push(arr2[i]);
+        if(arr1.indexOf(arr2[i]) === -1 && arr.indexOf(arr2[i]) === -1 ){
+             arr.push(arr2[i]);
             }
-         }
      }
      alert(arr.toString());
     // for (let i = 0; i <arr2.length ; i++) {

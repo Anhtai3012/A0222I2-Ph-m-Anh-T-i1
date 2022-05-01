@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt('nhap ten ')
+    console.log(typeof input);
+     let result = [];
+    input.trim().toLowerCase()
+   function sreach(input) {
+        let arr = Array.from(input)
+       let result ="";
+        result += arr[0].toUpperCase();
+       for (let i = 1; i <arr.length ; i++) {
+           if (arr[i]==' ' && arr[i+1]==' '){
+               continue;
+           }else if(arr[i]==' '){
+               result += arr[i];
+               result += arr[i+1].toUpperCase();
+               i++
+           }else {
+               result+= arr[i].toLowerCase()
+           }
+       }
+      return result
+   }
+   alert(sreach(input))
+</script>
+</body>
+</html>

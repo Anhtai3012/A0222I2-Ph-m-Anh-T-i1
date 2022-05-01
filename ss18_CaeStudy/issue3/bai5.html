@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input ;
+    do {
+        alert('1/cafe\n2/Cam vat\n3/Ca rot\n4/Ca chua\n5/nuoc loc\n6/nuoc dua\n7/Exit');
+         input = parseInt(prompt('nhap mon'));
+         if(input == 1){
+             let  cost = 15;
+             let out = parseInt(prompt('nhap so luong cafe'));
+             alert('gia san pham la:'+cost*out+'nghin ')
+         }
+        if(input == 2){
+            let  cost = 20 ;
+            let out = parseInt(prompt('nhap so luong cam vat'));
+            alert('gia san pham la:'+cost*out+'nghin ')
+        }if (input == 3){
+            let  cost = 22 ;
+            let out = parseInt(prompt('nhap so luong ca rot'));
+            alert('gia san pham la:'+cost*out+'nghin ')
+        }
+        if (input == 4){
+            let  cost = 25 ;
+            let out = parseInt(prompt('nhap so luong ca chua'));
+            alert('gia san pham la:'+cost*out+'nghin ')
+        }
+        if (input == 5){
+            let  cost = 27 ;
+            let out = parseInt(prompt('nhap so luong nuoc loc '));
+            alert('gia san pham la:'+cost*out+'nghin ')
+        }
+        if (input == 6){
+            let  cost = 30 ;
+            let out = parseInt(prompt('nhap so luong dua'));
+            alert('gia san pham la:'+cost*out+'nghin ')
+        }
+    } while (input<7)
+</script>
+</body>
+</html>

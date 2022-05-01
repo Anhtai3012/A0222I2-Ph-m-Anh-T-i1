@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function nguyento() {
+        let input = parseInt(prompt('nhap row'));
+        let input1 = parseInt(prompt('nhap col'));
+        let arr = new Array(input);
+        let count = 0;
+        let str='&nbsp';
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = new Array(input1);
+            for (let j = 0; j < arr[i].length; j++) {
+                let value = parseInt(prompt('[' + i + ']' + '[' + j + ']'))
+                arr[i][j] = value
+            }
+        }
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                document.write(arr[i][j])
+            }
+            document.write('<br>')
+        }
+        for (let i = 0; i <arr.length ; i++) {
+            for (let j = 0; j <arr[i].length ; j++) {
+                if (check(arr[i][j]) == true){
+                    str += arr[i][j]+' ';
+                    count++
+                }
+            }
+        }
+        document.write('so  nguyen to la'+str);
+        document.write('<br>'+'so luong la:'+ count)
+    }
+   function check(n) {
+        let count = 0
+        if (n <=1){
+            return false
+        }
+       for (let i = 1; i <= n;i++) {
+           if(n%i == 0){
+               count++
+           }
+       }
+       if (count == 2){
+           return true
+       }else {
+           return false
+       }
+   }
+   nguyento();
+</script>
+</body>
+</html>

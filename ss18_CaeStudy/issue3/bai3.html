@@ -8,11 +8,17 @@
 <script>
     let numerators = [5, 2, 5];
     let denominators = [6, 3, 4];
-    for (const index in numerators) {
-        console.log(index)
-
+    let max = 0 ;
+    let index= 0;
+    let temp=0;
+    for (let i = 0; i <numerators.length ; i++) {
+            if( temp < numerators[i] / denominators[i]){
+                max = numerators[i]+'/'+denominators[i]
+                temp =numerators[i] / denominators[i];
+                index = i;
+        }
     }
-
+    alert(max+' chi so index '+index)
 </script>
 </body>
 </html>
